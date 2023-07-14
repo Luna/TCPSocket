@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TCPSocket">
+  <ClassDiagramComponents>
+    <Class name="TCPClient" package="TCPSocket" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="tcpSocket" type="Socket" visibility="private"/>
+        <Field name="serverAddress" type="InetAddress" visibility="private"/>
+        <Field name="serverPort" type="int" visibility="private"/>
+        <Field name="scanner" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private">
+          <Argument type="InetAddress" name="serverAddress"/>
+          <Argument type="int" name="serverPort"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TCPServer" package="TCPSocket" visibility="public" xPosition="394.0" yPosition="20.0">
+      <Fields>
+        <Field name="server" type="ServerSocket" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ipAddress"/>
+          <Argument type="int" name="port"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="listen" returnType="void" visibility="private"/>
+        <Method name="getSocketAddress" returnType="InetAddress" visibility="public"/>
+        <Method name="getPort" returnType="int" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
